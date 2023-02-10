@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { navlinks } from "../data/traveldata";
 import logo from "../images/logo.png";
 import menu from "../images/menu.svg";
 import PopupMenu from "./PopupMenu";
 
-function Navbar({ navLinks }) {
+function Navbar({ navlinks }) {
   const [popUpState, setPopUpState] = useState(false);
   const [navState, setNavState] = useState(false);
   const onTriggerPopUp = () => setPopUpState(!popUpState);
@@ -19,7 +18,7 @@ function Navbar({ navLinks }) {
   };
 
   useEffect(() => {
-    window.addEventListener("click", onNavScroll);
+    window.addEventListener("scroll", onNavScroll);
 
     return () => {
       window.removeEventListener("scroll", onNavScroll);
@@ -55,12 +54,13 @@ function Navbar({ navLinks }) {
                 type="button"
                 className="flex items-center justify-center transition-all duration-200 active:scale-90 cursor-pointer"
                 onClick={onTriggerPopUp}
-              ></button>
-              <img
-                src={menu}
-                alt="menu-svg"
-                className="object-cover shadow-sm filter "
-              />
+              >
+                <img
+                  src={menu}
+                  alt="menu-svg"
+                  className="object-cover shadow-sm filter "
+                />
+              </button>
             </li>
           </ul>
         </nav>

@@ -12,18 +12,20 @@ function Footer({ footerAPI: { titles, links, sociallinks } }) {
               </h1>
             </div>;
           })}
-          {links.map((list, i) => (
+          {links?.map((list, i) => (
             <ul
               key={i}
               className="grid items-center justify-items-center gap-1"
             >
               {list?.map((val, i) => (
-                <li className="font-mono text-sm sm:text-xs"></li>
+                <li key={i} className="font-mono text-sm sm:text-xs">
+                  {val.link}
+                </li>
               ))}
             </ul>
           ))}
         </div>
-        <div className="w-7/12 lg:w-[95vh] m-auto mt-9">
+        <div className="w-7/12 lg:w-[95vw] m-auto mt-9">
           <div className="h-[0.1vh] bg-black/30 my-7 md:my-5"></div>
           <div className="flex items-center justify-between px-7 md:px-0 md:gap-5 md:flex-col-reverse">
             <p className="text-sm md:text-center">

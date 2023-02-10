@@ -49,12 +49,12 @@
   .showpopup {
     opacity: 1;
     visibility: visible;
-    transform: skewY(3deg) translate(30px);
+    transform: skewY(0deg) translateY(10px);
   }
   .noshowpopup {
     opacity: 0;
     visibility: hidden;
-    transform: skewY(3deg) translate(-30px);
+    transform: skewY(3deg) translateY(-30px);
   }
 
   .nav-default {
