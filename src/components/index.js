@@ -5,4 +5,5 @@ export { default as Explore } from "./Explore";
 export { default as Advertise } from "./Advertise";
 export { default as Pricings } from "./Pricings";
 export { default as Banner } from "./Banner";
+export { default as Newslatter } from "./Newslatter";
 export { default as Footer } from "./Footer";

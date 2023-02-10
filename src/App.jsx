@@ -8,6 +8,7 @@ import {
   Advertise,
   Pricings,
   Banner,
+  Newslatter,
 } from "./components";
 import {
   hero,
@@ -32,6 +33,7 @@ function App() {
       <Advertise brands={brands} />
       <Pricings pricingapi={pricingapi} />
       <Banner bannerAPI={bannerAPI} />
+      <Newslatter />
       <Footer footerAPI={footerAPI} />
     </>
   );
