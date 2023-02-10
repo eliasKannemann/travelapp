@@ -7,6 +7,7 @@ import {
   Explore,
   Advertise,
   Pricings,
+  Banner,
 } from "./components";
 import {
   hero,
@@ -15,6 +16,7 @@ import {
   placesAPI,
   brands,
   pricingapi,
+  bannerAPI,
 } from "./data/traveldata";
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
       <Explore title="explore the world" placesAPI={placesAPI} />
       <Advertise brands={brands} />
       <Pricings pricingapi={pricingapi} />
+      <Banner bannerAPI={bannerAPI} />
       <Footer />
     </>
   );
