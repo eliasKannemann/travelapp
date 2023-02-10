@@ -17,6 +17,7 @@ import {
   brands,
   pricingapi,
   bannerAPI,
+  footerAPI,
 } from "./data/traveldata";
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
       <Advertise brands={brands} />
       <Pricings pricingapi={pricingapi} />
       <Banner bannerAPI={bannerAPI} />
-      <Footer />
+      <Footer footerAPI={footerAPI} />
     </>
   );
 }
